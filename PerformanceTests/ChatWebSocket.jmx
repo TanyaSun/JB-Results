@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="2.4" jmeter="2.9 r1437961">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="Test Plan" enabled="true">
+      <stringProp name="TestPlan.comments"></stringProp>
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+        <collectionProp name="Arguments.arguments"/>
+      </elementProp>
+      <stringProp name="TestPlan.user_define_classpath"></stringProp>
+    </TestPlan>
+    <hashTree>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Thread Group" enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">20</stringProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">20</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">4</stringProp>
+        <longProp name="ThreadGroup.start_time">1373981239000</longProp>
+        <longProp name="ThreadGroup.end_time">1373981239000</longProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration"></stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+      </ThreadGroup>
+      <hashTree>
+        <CookieManager guiclass="CookiePanel" testclass="CookieManager" testname="HTTP Cookie Manager" enabled="true">
+          <collectionProp name="CookieManager.cookies">
+            <elementProp name="JSESSIONID" elementType="Cookie" testname="JSESSIONID">
+              <stringProp name="Cookie.value">1d561g9h7njcxqjqxv90bjwdi</stringProp>
+              <stringProp name="Cookie.domain"></stringProp>
+              <stringProp name="Cookie.path"></stringProp>
+              <boolProp name="Cookie.secure">false</boolProp>
+              <longProp name="Cookie.expires">0</longProp>
+              <boolProp name="Cookie.path_specified">true</boolProp>
+              <boolProp name="Cookie.domain_specified">true</boolProp>
+            </elementProp>
+          </collectionProp>
+          <boolProp name="CookieManager.clearEachIteration">false</boolProp>
+        </CookieManager>
+        <hashTree/>
+        <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+          <collectionProp name="HeaderManager.headers">
+            <elementProp name="" elementType="Header">
+              <stringProp name="Header.name">Content-Type</stringProp>
+              <stringProp name="Header.value">text/x-gwt-rpc; charset=utf-8</stringProp>
+            </elementProp>
+          </collectionProp>
+        </HeaderManager>
+        <hashTree/>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="ChatLogin" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">7|0|6|http://localhost:8080/delightex.Chat/|1E8E43E38DEB0E03B422F25B7F5AC074|delightex.client.rpc.ChatService|login|java.lang.String/2004016611|Medved|1|2|3|4|1|5|6|</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">localhost</stringProp>
+          <stringProp name="HTTPSampler.port">8080</stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          <stringProp name="HTTPSampler.protocol">http</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding">utf-8</stringProp>
+          <stringProp name="HTTPSampler.path">/delightex.Chat/ChatService</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <boolProp name="HTTPSampler.monitor">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="Content-Type" elementType="Header">
+                <stringProp name="Header.name">Content-Type</stringProp>
+                <stringProp name="Header.value">text/x-gwt-rpc; charset=utf-8</stringProp>
+              </elementProp>
+              <elementProp name="Accept-Language" elementType="Header">
+                <stringProp name="Header.name">Accept-Language</stringProp>
+                <stringProp name="Header.value">ru-RU,ru;q=0.9,en;q=0.8</stringProp>
+              </elementProp>
+              <elementProp name="X-GWT-Permutation" elementType="Header">
+                <stringProp name="Header.name">X-GWT-Permutation</stringProp>
+                <stringProp name="Header.value">2F5331FE4470C54502620340D97C2E15</stringProp>
+              </elementProp>
+              <elementProp name="Accept" elementType="Header">
+                <stringProp name="Header.name">Accept</stringProp>
+                <stringProp name="Header.value">text/html, application/xml;q=0.9, application/xhtml+xml, image/png, image/webp, image/jpeg, image/gif, image/x-xbitmap, */*;q=0.1</stringProp>
+              </elementProp>
+              <elementProp name="X-GWT-Module-Base" elementType="Header">
+                <stringProp name="Header.name">X-GWT-Module-Base</stringProp>
+                <stringProp name="Header.value">http://localhost:8080/delightex.Chat/</stringProp>
+              </elementProp>
+              <elementProp name="User-Agent" elementType="Header">
+                <stringProp name="Header.name">User-Agent</stringProp>
+                <stringProp name="Header.value">Opera/9.80 (Windows NT 6.1; WOW64; U; MRA 6.0 (build 6089); en) Presto/2.10.289 Version/12.00</stringProp>
+              </elementProp>
+              <elementProp name="Referer" elementType="Header">
+                <stringProp name="Header.name">Referer</stringProp>
+                <stringProp name="Header.value">http://tnasredinova:8080/</stringProp>
+              </elementProp>
+              <elementProp name="Accept-Encoding" elementType="Header">
+                <stringProp name="Header.name">Accept-Encoding</stringProp>
+                <stringProp name="Header.value">gzip, deflate</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+        </hashTree>
+        <net.unit8.jmeter.protocol.websocket.sampler.WebSocketSampler guiclass="net.unit8.jmeter.protocol.websocket.control.gui.WebSocketSamplerGui" testclass="net.unit8.jmeter.protocol.websocket.sampler.WebSocketSampler" testname="SendMessage" enabled="true">
+          <elementProp name="WebSocketSampler.arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+            <collectionProp name="Arguments.arguments"/>
+          </elementProp>
+          <stringProp name="WebSocketSampler.domain">127.0.0.1</stringProp>
+          <stringProp name="WebSocketSampler.path">/wschat?room=Toster&amp;hackuser=TanyaSun&amp;Buffer=X</stringProp>
+          <stringProp name="WebSocketSampler.port">8080</stringProp>
+          <stringProp name="WebSocketSampler.protocol"></stringProp>
+          <stringProp name="WebSocketSampler.contentEncoding">utf-8</stringProp>
+          <stringProp name="WebSocketSampler.sendMessage">JMeter Message</stringProp>
+          <stringProp name="WebSocketSampler.recvMessage"></stringProp>
+        </net.unit8.jmeter.protocol.websocket.sampler.WebSocketSampler>
+        <hashTree/>
+        <net.unit8.jmeter.protocol.websocket.sampler.WebSocketSampler guiclass="net.unit8.jmeter.protocol.websocket.control.gui.WebSocketSamplerGui" testclass="net.unit8.jmeter.protocol.websocket.sampler.WebSocketSampler" testname="SendMessage" enabled="true">
+          <elementProp name="WebSocketSampler.arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+            <collectionProp name="Arguments.arguments"/>
+          </elementProp>
+          <stringProp name="WebSocketSampler.domain">127.0.0.1</stringProp>
+          <stringProp name="WebSocketSampler.path">/wschat?room=Toster&amp;hackuser=TanyaSun&amp;Buffer=X</stringProp>
+          <stringProp name="WebSocketSampler.port">8080</stringProp>
+          <stringProp name="WebSocketSampler.protocol"></stringProp>
+          <stringProp name="WebSocketSampler.contentEncoding">utf-8</stringProp>
+          <stringProp name="WebSocketSampler.sendMessage">Greeting</stringProp>
+          <stringProp name="WebSocketSampler.recvMessage"></stringProp>
+        </net.unit8.jmeter.protocol.websocket.sampler.WebSocketSampler>
+        <hashTree/>
+        <net.unit8.jmeter.protocol.websocket.sampler.WebSocketSampler guiclass="net.unit8.jmeter.protocol.websocket.control.gui.WebSocketSamplerGui" testclass="net.unit8.jmeter.protocol.websocket.sampler.WebSocketSampler" testname="SendMessage" enabled="true">
+          <elementProp name="WebSocketSampler.arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+            <collectionProp name="Arguments.arguments"/>
+          </elementProp>
+          <stringProp name="WebSocketSampler.domain">127.0.0.1</stringProp>
+          <stringProp name="WebSocketSampler.path">/wschat?room=Toster&amp;hackuser=TanyaSun&amp;Buffer=X</stringProp>
+          <stringProp name="WebSocketSampler.port">8080</stringProp>
+          <stringProp name="WebSocketSampler.protocol"></stringProp>
+          <stringProp name="WebSocketSampler.contentEncoding">utf-8</stringProp>
+          <stringProp name="WebSocketSampler.sendMessage">Hello</stringProp>
+          <stringProp name="WebSocketSampler.recvMessage"></stringProp>
+        </net.unit8.jmeter.protocol.websocket.sampler.WebSocketSampler>
+        <hashTree/>
+        <net.unit8.jmeter.protocol.websocket.sampler.WebSocketSampler guiclass="net.unit8.jmeter.protocol.websocket.control.gui.WebSocketSamplerGui" testclass="net.unit8.jmeter.protocol.websocket.sampler.WebSocketSampler" testname="SendMessage" enabled="true">
+          <elementProp name="WebSocketSampler.arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+            <collectionProp name="Arguments.arguments"/>
+          </elementProp>
+          <stringProp name="WebSocketSampler.domain">127.0.0.1</stringProp>
+          <stringProp name="WebSocketSampler.path">/wschat?room=Toster&amp;hackuser=TanyaSun&amp;Buffer=X</stringProp>
+          <stringProp name="WebSocketSampler.port">8080</stringProp>
+          <stringProp name="WebSocketSampler.protocol"></stringProp>
+          <stringProp name="WebSocketSampler.contentEncoding">utf-8</stringProp>
+          <stringProp name="WebSocketSampler.sendMessage">Order accepted!</stringProp>
+          <stringProp name="WebSocketSampler.recvMessage"></stringProp>
+        </net.unit8.jmeter.protocol.websocket.sampler.WebSocketSampler>
+        <hashTree/>
+        <net.unit8.jmeter.protocol.websocket.sampler.WebSocketSampler guiclass="net.unit8.jmeter.protocol.websocket.control.gui.WebSocketSamplerGui" testclass="net.unit8.jmeter.protocol.websocket.sampler.WebSocketSampler" testname="SendMessage" enabled="true">
+          <elementProp name="WebSocketSampler.arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+            <collectionProp name="Arguments.arguments"/>
+          </elementProp>
+          <stringProp name="WebSocketSampler.domain">127.0.0.1</stringProp>
+          <stringProp name="WebSocketSampler.path">/wschat?room=Toster&amp;hackuser=TanyaSun&amp;Buffer=X</stringProp>
+          <stringProp name="WebSocketSampler.port">8080</stringProp>
+          <stringProp name="WebSocketSampler.protocol"></stringProp>
+          <stringProp name="WebSocketSampler.contentEncoding">utf-8</stringProp>
+          <stringProp name="WebSocketSampler.sendMessage">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec adipiscing quam sit amet diam mollis, ut porta tortor consequat. Curabitur iaculis molestie elit, nec ullamcorper lectus placerat dictum. Quisque vel arcu eget felis auctor viverra. Nam consequat laoreet ornare. Nulla pulvinar, tortor eu dictum tincidunt, mi nisi ornare tortor, eu varius ipsum nunc nec risus. Integer pellentesque molestie lobortis. Sed ac est vel ligula suscipit volutpat. Etiam ultricies vel neque eu lobortis. In condimentum mauris purus, a tempor turpis egestas vitae. Nunc eget ultricies nunc. Fusce eleifend nulla vel nisl tincidunt, bibendum venenatis odio faucibus. Vivamus viverra ornare odio id dapibus. Donec et aliquam orci, sit amet rhoncus ligula. Vivamus euismod nisl sed purus consequat facilisis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</stringProp>
+          <stringProp name="WebSocketSampler.recvMessage"></stringProp>
+        </net.unit8.jmeter.protocol.websocket.sampler.WebSocketSampler>
+        <hashTree/>
+        <net.unit8.jmeter.protocol.websocket.sampler.WebSocketSampler guiclass="net.unit8.jmeter.protocol.websocket.control.gui.WebSocketSamplerGui" testclass="net.unit8.jmeter.protocol.websocket.sampler.WebSocketSampler" testname="SendMessage" enabled="true">
+          <elementProp name="WebSocketSampler.arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+            <collectionProp name="Arguments.arguments"/>
+          </elementProp>
+          <stringProp name="WebSocketSampler.domain">127.0.0.1</stringProp>
+          <stringProp name="WebSocketSampler.path">/wschat?room=Toster&amp;hackuser=TanyaSun&amp;Buffer=X</stringProp>
+          <stringProp name="WebSocketSampler.port">8080</stringProp>
+          <stringProp name="WebSocketSampler.protocol"></stringProp>
+          <stringProp name="WebSocketSampler.contentEncoding">utf-8</stringProp>
+          <stringProp name="WebSocketSampler.sendMessage">Duis id aliquam lectus. Nulla facilisi. Suspendisse varius luctus consectetur. Mauris mollis lobortis tempus. Sed in luctus tortor. Proin eleifend tristique tincidunt. Pellentesque accumsan volutpat ultricies. Ut semper dolor dui, sit amet egestas mi viverra eu. In eu leo erat. Vestibulum sapien sem, aliquet in turpis non, rutrum ultricies sapien.</stringProp>
+          <stringProp name="WebSocketSampler.recvMessage"></stringProp>
+        </net.unit8.jmeter.protocol.websocket.sampler.WebSocketSampler>
+        <hashTree/>
+        <net.unit8.jmeter.protocol.websocket.sampler.WebSocketSampler guiclass="net.unit8.jmeter.protocol.websocket.control.gui.WebSocketSamplerGui" testclass="net.unit8.jmeter.protocol.websocket.sampler.WebSocketSampler" testname="SendMessage" enabled="true">
+          <elementProp name="WebSocketSampler.arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+            <collectionProp name="Arguments.arguments"/>
+          </elementProp>
+          <stringProp name="WebSocketSampler.domain">127.0.0.1</stringProp>
+          <stringProp name="WebSocketSampler.path">/wschat?room=Toster&amp;hackuser=TanyaSun&amp;Buffer=X</stringProp>
+          <stringProp name="WebSocketSampler.port">8080</stringProp>
+          <stringProp name="WebSocketSampler.protocol"></stringProp>
+          <stringProp name="WebSocketSampler.contentEncoding">utf-8</stringProp>
+          <stringProp name="WebSocketSampler.sendMessage">Nam eget neque tempus, sodales eros in, venenatis massa. Aliquam ac euismod odio, vitae aliquam massa. Proin cursus arcu egestas purus elementum, non mattis massa fringilla. Suspendisse potenti. Quisque mattis lorem et mauris varius, ornare porta odio egestas. Pellentesque mollis fringilla lorem, vitae sollicitudin neque euismod vitae. Fusce elementum convallis justo id mattis.</stringProp>
+          <stringProp name="WebSocketSampler.recvMessage"></stringProp>
+        </net.unit8.jmeter.protocol.websocket.sampler.WebSocketSampler>
+        <hashTree/>
+      </hashTree>
+      <ResultCollector guiclass="TableVisualizer" testclass="ResultCollector" testname="View Results in Table" enabled="true">
+        <boolProp name="ResultCollector.error_logging">false</boolProp>
+        <objProp>
+          <name>saveConfig</name>
+          <value class="SampleSaveConfiguration">
+            <time>true</time>
+            <latency>true</latency>
+            <timestamp>true</timestamp>
+            <success>true</success>
+            <label>true</label>
+            <code>true</code>
+            <message>true</message>
+            <threadName>true</threadName>
+            <dataType>true</dataType>
+            <encoding>false</encoding>
+            <assertions>true</assertions>
+            <subresults>true</subresults>
+            <responseData>true</responseData>
+            <samplerData>false</samplerData>
+            <xml>false</xml>
+            <fieldNames>false</fieldNames>
+            <responseHeaders>true</responseHeaders>
+            <requestHeaders>false</requestHeaders>
+            <responseDataOnError>false</responseDataOnError>
+            <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+            <assertionsResultsToSave>0</assertionsResultsToSave>
+            <bytes>true</bytes>
+            <url>true</url>
+          </value>
+        </objProp>
+        <stringProp name="filename">C:\dev\projects\GitHub-Tanya\apache-jmeter-2.9\bin\ChatWebSocket.log</stringProp>
+      </ResultCollector>
+      <hashTree/>
+      <ResultCollector guiclass="GraphVisualizer" testclass="ResultCollector" testname="Graph Results" enabled="true">
+        <boolProp name="ResultCollector.error_logging">false</boolProp>
+        <objProp>
+          <name>saveConfig</name>
+          <value class="SampleSaveConfiguration">
+            <time>true</time>
+            <latency>true</latency>
+            <timestamp>true</timestamp>
+            <success>true</success>
+            <label>true</label>
+            <code>true</code>
+            <message>true</message>
+            <threadName>true</threadName>
+            <dataType>true</dataType>
+            <encoding>false</encoding>
+            <assertions>true</assertions>
+            <subresults>true</subresults>
+            <responseData>false</responseData>
+            <samplerData>false</samplerData>
+            <xml>false</xml>
+            <fieldNames>false</fieldNames>
+            <responseHeaders>false</responseHeaders>
+            <requestHeaders>false</requestHeaders>
+            <responseDataOnError>false</responseDataOnError>
+            <saveAssertionResultsFailureMessage>false</saveAssertionResultsFailureMessage>
+            <assertionsResultsToSave>0</assertionsResultsToSave>
+            <bytes>true</bytes>
+          </value>
+        </objProp>
+        <stringProp name="filename"></stringProp>
+      </ResultCollector>
+      <hashTree/>
+    </hashTree>
+  </hashTree>
+</jmeterTestPlan>
